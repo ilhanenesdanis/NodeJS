@@ -41,5 +41,29 @@ console.log(add(125, 1145));
 
 const addOne = (a) => a + 1;
 
-console.log(addOne(5))
+console.log(addOne(5));
 
+const person = {
+  name: "İlhan Enes",
+  age: 24,
+  greet() {
+    console.log("Hi, I am " + this.name);
+  },
+};
+
+person.greet();
+
+console.log(person);
+
+const hobbies = ["Sports", "Cooking"];
+
+for (let hobby of hobbies) {
+  console.log(hobby);
+}
+
+hobbies.forEach((x) => console.log(x));
+console.log(
+  hobbies.map((hobby) => {
+    return "Hobby: " + hobby;
+  })
+);
