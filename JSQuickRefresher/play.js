@@ -67,3 +67,45 @@ console.log(
     return "Hobby: " + hobby;
   })
 );
+
+hobbies.push("Programming");
+
+console.log(hobbies);
+
+const copiedArray = [hobbies];
+
+console.log(copiedArray);
+
+const toArray = (...args) => {
+  return args;
+};
+
+console.log(toArray(1, 2, 3, 4));
+
+const printName = ({ name }) => {
+  console.log(name);
+};
+printName(person);
+
+const fetchDta = (callback) => {
+
+  const promise =new Promise((resolve,reject)=>{
+    setTimeout(() => {
+      callback("Done!");
+    }, 1500);
+  });
+  return promise;
+};
+
+setTimeout(() => {
+  console.log("Timer is start!");
+  fetchDta().then(text=>{
+
+    console.log(text);
+
+    return fetchDta();
+    
+  });
+}, 2000);
+
+
